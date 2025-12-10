@@ -134,6 +134,7 @@ export default function ProjectsPage() {
                     {project.title}
                   </h3>
                   <p className="text-sm text-slate-500 mb-2 flex items-center gap-1">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:map-pin" width="14"></iconify-icon>
                     {project.location}
                   </p>
@@ -188,6 +189,7 @@ export default function ProjectsPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-500 transition-colors flex items-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:message-circle" width="18"></iconify-icon>
                 WhatsApp
               </a>

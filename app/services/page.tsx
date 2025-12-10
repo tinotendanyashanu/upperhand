@@ -151,6 +151,7 @@ export default function ServicesPage() {
                         className="object-cover"
                       />
                       <div className={`absolute top-4 left-4 ${colorClasses[service.color].bg} text-white px-3 py-1.5 rounded-lg text-sm font-medium flex items-center gap-2`}>
+                        {/* @ts-expect-error - iconify-icon is a custom element */}
                         <iconify-icon icon={service.icon} width="16"></iconify-icon>
                         {service.title}
                       </div>
@@ -159,6 +160,7 @@ export default function ServicesPage() {
                   
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                     <div className={`w-14 h-14 ${colorClasses[service.color].light} rounded-xl flex items-center justify-center mb-6`}>
+                      {/* @ts-expect-error - iconify-icon is a custom element */}
                       <iconify-icon icon={service.icon} width="28" className={colorClasses[service.color].text}></iconify-icon>
                     </div>
                     <h2 className="text-3xl font-semibold text-slate-900 mb-4">{service.title}</h2>
@@ -168,6 +170,7 @@ export default function ServicesPage() {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2 text-sm text-slate-600">
+                          {/* @ts-expect-error - iconify-icon is a custom element */}
                           <iconify-icon icon="lucide:check" width="16" className={colorClasses[service.color].text}></iconify-icon>
                           {feature}
                         </li>
@@ -179,6 +182,7 @@ export default function ServicesPage() {
                       className={`inline-flex items-center gap-2 px-6 py-3 ${colorClasses[service.color].bg} ${colorClasses[service.color].hover} text-white font-semibold rounded-lg transition-colors`}
                     >
                       Get a Quote
+                      {/* @ts-expect-error - iconify-icon is a custom element */}
                       <iconify-icon icon="lucide:arrow-right" width="18"></iconify-icon>
                     </Link>
                   </div>
@@ -208,6 +212,7 @@ export default function ServicesPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-500 transition-colors flex items-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:message-circle" width="18"></iconify-icon>
                 WhatsApp
               </a>

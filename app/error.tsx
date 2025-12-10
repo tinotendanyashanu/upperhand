@@ -16,6 +16,7 @@ export default function Error({
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 bg-slate-50">
       <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mb-6">
+        {/* @ts-expect-error - iconify-icon is a custom element */}
         <iconify-icon icon="lucide:alert-circle" width="48" className="text-red-500"></iconify-icon>
       </div>
       <h2 className="text-3xl font-bold text-slate-900 mb-4">Something went wrong!</h2>

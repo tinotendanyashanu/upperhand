@@ -319,6 +319,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <ScrollReveal>
             <div className={`inline-flex items-center gap-2 ${colors.bg} px-4 py-2 rounded-full text-white text-sm font-medium mb-4`}>
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon={service.icon} width="18"></iconify-icon>
               {service.title}
             </div>
@@ -339,6 +340,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 href="tel:+263771591526"
                 className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-colors flex items-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:phone" width="18"></iconify-icon>
                 Call Now
               </a>
@@ -396,6 +398,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ScrollReveal key={index} delay={index % 3 === 1 ? "100" : index % 3 === 2 ? "200" : undefined}>
                 <div className={`bg-white p-6 rounded-xl border ${colors.border} hover:shadow-lg transition-shadow`}>
                   <div className={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center text-white mb-4`}>
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon={feature.icon} width="24"></iconify-icon>
                   </div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
@@ -427,6 +430,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <p className="text-slate-400 text-sm">{step.description}</p>
                   {index < service.process.length - 1 && (
                     <div className="hidden md:block absolute top-8 right-0 transform translate-x-1/2">
+                      {/* @ts-expect-error - iconify-icon is a custom element */}
                       <iconify-icon icon="lucide:chevron-right" width="24" class="text-slate-700"></iconify-icon>
                     </div>
                   )}
@@ -453,6 +457,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ScrollReveal key={index} delay={index % 2 === 1 ? "100" : undefined}>
                 <div className={`border ${colors.border} rounded-xl p-6`}>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 flex items-start gap-3">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:help-circle" width="20" class={colors.text}></iconify-icon>
                     {faq.question}
                   </h3>
@@ -483,6 +488,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-500 transition-colors flex items-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:message-circle" width="18"></iconify-icon>
                 WhatsApp Us
               </a>

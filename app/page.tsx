@@ -45,12 +45,8 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 hover:border-green-400 transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 group"
               >
-                <iconify-icon
-                  icon="lucide:message-circle"
-                  width="18"
-                  height="18"
-                  className="text-green-400"
-                ></iconify-icon>
+                {/* @ts-expect-error - iconify-icon is a custom element */}
+                <iconify-icon icon="lucide:message-circle" width="18" height="18" className="text-green-400"></iconify-icon>
                 WhatsApp Us
               </a>
             </div>
@@ -61,11 +57,8 @@ export default function Home() {
             <div className="mt-20 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex flex-col items-center justify-center gap-2 group cursor-default">
                 <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                  <iconify-icon
-                    icon="lucide:shield-check"
-                    className="text-amber-400 group-hover:scale-110 transition-transform duration-300"
-                    width="20"
-                  ></iconify-icon>
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:shield-check" className="text-amber-400 group-hover:scale-110 transition-transform duration-300" width="20"></iconify-icon>
                 </div>
                 <span className="text-xs font-semibold tracking-tight uppercase text-slate-300 group-hover:text-white transition-colors">
                   Quality Guaranteed
@@ -73,11 +66,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center justify-center gap-2 group cursor-default">
                 <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                  <iconify-icon
-                    icon="lucide:award"
-                    className="text-amber-400 group-hover:scale-110 transition-transform duration-300"
-                    width="20"
-                  ></iconify-icon>
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:award" className="text-amber-400 group-hover:scale-110 transition-transform duration-300" width="20"></iconify-icon>
                 </div>
                 <span className="text-xs font-semibold tracking-tight uppercase text-slate-300 group-hover:text-white transition-colors">
                   Expert Team
@@ -85,11 +75,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center justify-center gap-2 group cursor-default">
                 <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                  <iconify-icon
-                    icon="lucide:clock"
-                    className="text-amber-400 group-hover:scale-110 transition-transform duration-300"
-                    width="20"
-                  ></iconify-icon>
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:clock" className="text-amber-400 group-hover:scale-110 transition-transform duration-300" width="20"></iconify-icon>
                 </div>
                 <span className="text-xs font-semibold tracking-tight uppercase text-slate-300 group-hover:text-white transition-colors">
                   On-Time Delivery
@@ -97,11 +84,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center justify-center gap-2 group cursor-default">
                 <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                  <iconify-icon
-                    icon="lucide:thumbs-up"
-                    className="text-amber-400 group-hover:scale-110 transition-transform duration-300"
-                    width="20"
-                  ></iconify-icon>
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:thumbs-up" className="text-amber-400 group-hover:scale-110 transition-transform duration-300" width="20"></iconify-icon>
                 </div>
                 <span className="text-xs font-semibold tracking-tight uppercase text-slate-300 group-hover:text-white transition-colors">
                   100% Satisfaction
@@ -130,6 +114,7 @@ export default function Home() {
             <ScrollReveal>
               <Link href="/services/solar" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-amber-200 hover:shadow-xl hover:shadow-amber-100/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:sun" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Solar Installation</h3>
@@ -137,7 +122,8 @@ export default function Home() {
                   Complete solar solutions including panels, inverters, batteries, and installation for homes and businesses.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-amber-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -146,6 +132,7 @@ export default function Home() {
             <ScrollReveal delay="100">
               <Link href="/services/electrical" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:zap" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Electrical Services</h3>
@@ -153,7 +140,8 @@ export default function Home() {
                   Professional electrical wiring, installations, repairs, DB board upgrades, and industrial electrical work.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-blue-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -162,6 +150,7 @@ export default function Home() {
             <ScrollReveal delay="200">
               <Link href="/services/boreholes" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-cyan-200 hover:shadow-xl hover:shadow-cyan-100/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-cyan-600 group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:droplets" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Borehole Drilling</h3>
@@ -169,7 +158,8 @@ export default function Home() {
                   Complete borehole services from site survey, drilling, casing to pump installation and water tank setup.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-cyan-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -178,6 +168,7 @@ export default function Home() {
             <ScrollReveal>
               <Link href="/services/roofing" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-slate-600 group-hover:scale-110 group-hover:bg-slate-800 group-hover:text-white group-hover:border-slate-800 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:home" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Roofing Solutions</h3>
@@ -185,7 +176,8 @@ export default function Home() {
                   Quality roofing installation including IBR sheets, tiles, trusses, gutters, and waterproofing solutions.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-slate-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -194,6 +186,7 @@ export default function Home() {
             <ScrollReveal delay="100">
               <Link href="/services/ceilings" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-indigo-600 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:layout-template" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Ceiling Designs</h3>
@@ -201,7 +194,8 @@ export default function Home() {
                   All ceiling types including PVC, gypsum, T&amp;G, rhinoboard, suspended ceilings with custom lighting.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-indigo-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -210,6 +204,7 @@ export default function Home() {
             <ScrollReveal delay="200">
               <Link href="/services/painting" className="block group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-rose-200 hover:shadow-xl hover:shadow-rose-100/50 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600 transition-all duration-300">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:paintbrush" width="24"></iconify-icon>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 tracking-tight">Painting Services</h3>
@@ -217,7 +212,8 @@ export default function Home() {
                   Professional interior and exterior painting, texture coating, waterproofing, and decorative finishes.
                 </p>
                 <span className="inline-flex items-center text-xs font-semibold text-rose-600 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  Learn More <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
+                  Learn More {/* @ts-expect-error - iconify-icon is a custom element */}
+                  <iconify-icon icon="lucide:arrow-right" className="ml-1" width="14"></iconify-icon>
                 </span>
               </Link>
             </ScrollReveal>
@@ -238,6 +234,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <ScrollReveal>
               <div className="mb-4 text-amber-600 bg-white p-3 rounded-lg w-fit shadow-sm">
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:users" width="24"></iconify-icon>
               </div>
               <h4 className="text-base font-semibold text-slate-900 mb-2">Skilled Technicians</h4>
@@ -247,6 +244,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay="100">
               <div className="mb-4 text-amber-600 bg-white p-3 rounded-lg w-fit shadow-sm">
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:badge-check" width="24"></iconify-icon>
               </div>
               <h4 className="text-base font-semibold text-slate-900 mb-2">Quality Materials</h4>
@@ -256,6 +254,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay="200">
               <div className="mb-4 text-amber-600 bg-white p-3 rounded-lg w-fit shadow-sm">
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:wallet" width="24"></iconify-icon>
               </div>
               <h4 className="text-base font-semibold text-slate-900 mb-2">Affordable Pricing</h4>
@@ -265,6 +264,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay="300">
               <div className="mb-4 text-amber-600 bg-white p-3 rounded-lg w-fit shadow-sm">
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:headphones" width="24"></iconify-icon>
               </div>
               <h4 className="text-base font-semibold text-slate-900 mb-2">24/7 Support</h4>
@@ -286,7 +286,8 @@ export default function Home() {
               <p className="text-slate-500 mt-2">Some of our recent completed projects across Zimbabwe.</p>
             </div>
             <Link href="/projects" className="inline-flex items-center text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors">
-              View All Projects <iconify-icon icon="lucide:arrow-right" className="ml-1" width="16"></iconify-icon>
+              View All Projects {/* @ts-expect-error - iconify-icon is a custom element */}
+              <iconify-icon icon="lucide:arrow-right" className="ml-1" width="16"></iconify-icon>
             </Link>
           </ScrollReveal>
 
@@ -375,6 +376,7 @@ export default function Home() {
               <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
+                    // @ts-expect-error - iconify-icon is a custom element
                     <iconify-icon key={i} icon="lucide:star" width="16"></iconify-icon>
                   ))}
                 </div>
@@ -398,6 +400,7 @@ export default function Home() {
               <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
+                    // @ts-expect-error - iconify-icon is a custom element
                     <iconify-icon key={i} icon="lucide:star" width="16"></iconify-icon>
                   ))}
                 </div>
@@ -421,6 +424,7 @@ export default function Home() {
               <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
+                    // @ts-expect-error - iconify-icon is a custom element
                     <iconify-icon key={i} icon="lucide:star" width="16"></iconify-icon>
                   ))}
                 </div>
@@ -467,6 +471,7 @@ export default function Home() {
                 href="/contact"
                 className="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-slate-900 bg-amber-500 rounded-lg hover:bg-amber-400 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:mail" width="18"></iconify-icon>
                 Contact Us
               </Link>
@@ -474,6 +479,7 @@ export default function Home() {
                 href="tel:+263771591526"
                 className="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-transparent border border-white/30 rounded-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:phone" width="18"></iconify-icon>
                 0771 591 526
               </a>
@@ -483,6 +489,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-green-600 rounded-lg hover:bg-green-500 transition-all flex items-center justify-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:message-circle" width="18"></iconify-icon>
                 WhatsApp
               </a>

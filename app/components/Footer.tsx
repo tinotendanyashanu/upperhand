@@ -7,6 +7,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-6">
             <div className="w-8 h-8 bg-amber-500 text-white flex items-center justify-center rounded-lg shadow-sm">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:zap" width="16"></iconify-icon>
             </div>
             <span className="text-lg font-semibold tracking-tight text-slate-900">UPPERHAND</span>
@@ -16,12 +17,15 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-amber-500 transition-colors">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:facebook" width="20"></iconify-icon>
             </a>
             <a href="https://wa.me/263771591526" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-green-500 transition-colors">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:message-circle" width="20"></iconify-icon>
             </a>
             <a href="mailto:Takuenyash@gmail.com" className="text-slate-500 hover:text-amber-500 transition-colors">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
             </a>
           </div>
@@ -88,10 +92,12 @@ export default function Footer() {
           <h4 className="font-medium text-slate-900 mb-6">Contact Us</h4>
           <ul className="space-y-3 text-sm text-slate-600">
             <li className="flex items-start gap-3">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:map-pin" className="mt-0.5 text-amber-500" width="16"></iconify-icon>
               <span>Zimbabwe</span>
             </li>
             <li className="flex items-center gap-3">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:phone" className="text-amber-500" width="16"></iconify-icon>
               <div className="flex flex-col">
                 <a href="tel:+263771591526" className="hover:text-amber-500 transition-colors">0771 591 526</a>
@@ -99,6 +105,7 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex items-center gap-3">
+              {/* @ts-expect-error - iconify-icon is a custom element */}
               <iconify-icon icon="lucide:mail" className="text-amber-500" width="16"></iconify-icon>
               <a href="mailto:Takuenyash@gmail.com" className="hover:text-amber-500 transition-colors">Takuenyash@gmail.com</a>
             </li>
@@ -111,6 +118,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors shadow-sm hover:shadow-md"
           >
+            {/* @ts-expect-error - iconify-icon is a custom element */}
             <iconify-icon icon="lucide:message-circle" width="18"></iconify-icon>
             WhatsApp Us
           </a>
@@ -118,10 +126,12 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-slate-500">© {new Date().getFullYear()} Upperhand. All rights reserved.</p>
-        <div className="flex gap-6 text-xs text-slate-500">
-          <span>Trusted Engineering Solutions in Zimbabwe</span>
-        </div>
+        <p className="text-sm text-slate-500">
+          &copy; {new Date().getFullYear()} Upperhand. All rights reserved.
+        </p>
+        <p className="text-sm text-slate-500">
+          Designed by <a href="#" className="text-amber-600 hover:text-amber-700 transition-colors">Upperhand Tech</a>
+        </p>
       </div>
     </footer>
   );

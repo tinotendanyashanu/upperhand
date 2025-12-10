@@ -82,6 +82,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="bg-white p-8 rounded-2xl shadow-sm h-full">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:target" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">Our Mission</h3>
@@ -94,6 +95,7 @@ export default function AboutPage() {
             <ScrollReveal delay="100">
               <div className="bg-white p-8 rounded-2xl shadow-sm h-full">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:eye" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">Our Vision</h3>
@@ -118,6 +120,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="text-center p-6">
                 <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:star" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h4 className="font-semibold text-slate-900 mb-2">Quality</h4>
@@ -128,6 +131,7 @@ export default function AboutPage() {
             <ScrollReveal delay="100">
               <div className="text-center p-6">
                 <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:handshake" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h4 className="font-semibold text-slate-900 mb-2">Integrity</h4>
@@ -138,6 +142,7 @@ export default function AboutPage() {
             <ScrollReveal delay="200">
               <div className="text-center p-6">
                 <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:heart" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h4 className="font-semibold text-slate-900 mb-2">Customer Focus</h4>
@@ -148,6 +153,7 @@ export default function AboutPage() {
             <ScrollReveal delay="300">
               <div className="text-center p-6">
                 <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:lightbulb" width="24" className="text-amber-600"></iconify-icon>
                 </div>
                 <h4 className="font-semibold text-slate-900 mb-2">Innovation</h4>
@@ -175,6 +181,7 @@ export default function AboutPage() {
                 href="tel:+263771591526"
                 className="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2"
               >
+                {/* @ts-expect-error - iconify-icon is a custom element */}
                 <iconify-icon icon="lucide:phone" width="18"></iconify-icon>
                 0771 591 526
               </a>

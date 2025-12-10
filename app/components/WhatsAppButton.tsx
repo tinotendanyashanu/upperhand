@@ -24,6 +24,7 @@ export default function WhatsAppButton() {
       }`}
       aria-label="Chat on WhatsApp"
     >
+      {/* @ts-expect-error - iconify-icon is a custom element */}
       <iconify-icon icon="logos:whatsapp-icon" width="24" height="24"></iconify-icon>
       <span className="font-semibold text-sm hidden sm:block max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap">
         Chat with us

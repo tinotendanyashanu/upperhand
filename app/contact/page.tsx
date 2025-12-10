@@ -36,6 +36,7 @@ export default function ContactPage() {
                 {/* Phone Numbers */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:phone" width="24" className="text-amber-600"></iconify-icon>
                   </div>
                   <div>
@@ -59,6 +60,7 @@ export default function ContactPage() {
                   className="flex items-start gap-4 p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:message-circle" width="24" className="text-white"></iconify-icon>
                   </div>
                   <div>
@@ -71,6 +73,7 @@ export default function ContactPage() {
                 {/* Email */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:mail" width="24" className="text-amber-600"></iconify-icon>
                   </div>
                   <div>
@@ -84,6 +87,7 @@ export default function ContactPage() {
                 {/* Location */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:map-pin" width="24" className="text-amber-600"></iconify-icon>
                   </div>
                   <div>
@@ -96,6 +100,7 @@ export default function ContactPage() {
                 {/* Working Hours */}
                 <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:clock" width="24" className="text-amber-600"></iconify-icon>
                   </div>
                   <div>
@@ -189,6 +194,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full py-3 px-6 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-all flex items-center justify-center gap-2"
                   >
+                    {/* @ts-expect-error - iconify-icon is a custom element */}
                     <iconify-icon icon="lucide:send" width="18"></iconify-icon>
                     Send Message
                   </button>
@@ -213,6 +219,7 @@ export default function ContactPage() {
                 className="block p-6 bg-slate-800 rounded-xl text-center hover:bg-slate-700 transition-colors group"
               >
                 <div className="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:phone" width="24" className="text-white"></iconify-icon>
                 </div>
                 <h3 className="text-white font-semibold mb-1">Call Us</h3>
@@ -228,6 +235,7 @@ export default function ContactPage() {
                 className="block p-6 bg-green-600 rounded-xl text-center hover:bg-green-500 transition-colors group"
               >
                 <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:message-circle" width="24" className="text-green-600"></iconify-icon>
                 </div>
                 <h3 className="text-white font-semibold mb-1">WhatsApp</h3>
@@ -241,6 +249,7 @@ export default function ContactPage() {
                 className="block p-6 bg-slate-800 rounded-xl text-center hover:bg-slate-700 transition-colors group"
               >
                 <div className="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {/* @ts-expect-error - iconify-icon is a custom element */}
                   <iconify-icon icon="lucide:mail" width="24" className="text-white"></iconify-icon>
                 </div>
                 <h3 className="text-white font-semibold mb-1">Email Us</h3>

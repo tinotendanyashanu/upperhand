@@ -4,6 +4,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 bg-slate-50">
       <div className="w-24 h-24 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+        {/* @ts-expect-error - iconify-icon is a custom element */}
         <iconify-icon icon="lucide:alert-triangle" width="48" className="text-amber-500"></iconify-icon>
       </div>
       <h1 className="text-4xl font-bold text-slate-900 mb-4">Page Not Found</h1>
