@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-amber-50 to-white">
+      <section className="pt-32 pb-16 bg-linear-to-b from-amber-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <span className="text-xs font-semibold tracking-wider text-amber-600 uppercase">About Us</span>
@@ -39,7 +39,7 @@ export default function AboutPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-white text-lg font-medium">Professional Team, Quality Results</p>
                 </div>

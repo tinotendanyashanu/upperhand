@@ -2,6 +2,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import { serviceMedia } from "../../lib/media";
 
 export const metadata: Metadata = {
   title: "Our Services | Upperhand - Solar, Electrical, Boreholes, Roofing, Ceilings, Painting",
@@ -15,7 +16,7 @@ const services = [
     description: "Complete solar solutions for homes and businesses. We handle everything from system design to installation and maintenance.",
     icon: "lucide:sun",
     color: "amber",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.solar.hero,
     features: [
       "Solar panel installation",
       "Inverter setup and configuration",
@@ -31,7 +32,7 @@ const services = [
     description: "Professional electrical services for residential, commercial, and industrial clients. Safety and quality guaranteed.",
     icon: "lucide:zap",
     color: "blue",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.electrical.hero,
     features: [
       "House wiring & rewiring",
       "DB board installation & upgrades",
@@ -47,7 +48,7 @@ const services = [
     description: "Complete borehole solutions from site survey to pump installation. Get reliable water supply for your property.",
     icon: "lucide:droplets",
     color: "cyan",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.boreholes.hero,
     features: [
       "Site surveying",
       "Borehole drilling",
@@ -63,7 +64,7 @@ const services = [
     description: "Quality roofing installation and repairs. We work with various roofing materials to suit your needs and budget.",
     icon: "lucide:home",
     color: "slate",
-    image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.roofing.hero,
     features: [
       "IBR roofing sheets",
       "Tile roofing",
@@ -79,7 +80,7 @@ const services = [
     description: "Transform your space with beautiful ceiling designs. We offer various ceiling types and custom solutions.",
     icon: "lucide:layout-template",
     color: "indigo",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.ceilings.hero,
     features: [
       "PVC ceilings",
       "Gypsum ceilings",
@@ -95,7 +96,7 @@ const services = [
     description: "Professional painting services that bring your vision to life. Quality finishes for interiors and exteriors.",
     icon: "lucide:paintbrush",
     color: "rose",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=800&auto=format&fit=crop",
+    image: serviceMedia.painting.hero,
     features: [
       "Interior painting",
       "Exterior painting",
@@ -120,7 +121,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-amber-50 to-white">
+      <section className="pt-32 pb-16 bg-linear-to-b from-amber-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <span className="text-xs font-semibold tracking-wider text-amber-600 uppercase">Our Services</span>
@@ -143,7 +144,7 @@ export default function ServicesPage() {
               <ScrollReveal key={service.slug}>
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                    <div className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-xl">
                       <Image
                         src={service.image}
                         alt={service.title}

@@ -1,33 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-
-const slides = [
-  {
-    src: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1920&auto=format&fit=crop",
-    alt: "Solar Installation",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1920&auto=format&fit=crop",
-    alt: "Electrical Work",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop",
-    alt: "Borehole Drilling",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1920&auto=format&fit=crop",
-    alt: "Roofing",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1920&auto=format&fit=crop",
-    alt: "Painting",
-  },
-];
+import { solarMedia, boreholeMedia, ceilingMedia, electricMedia, paintingMedia, roofingMedia } from "../../lib/media";
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = useMemo(() => {
+    const mixedSlides = [
+      ...solarMedia.slice(0, 2),
+      ...boreholeMedia.slice(0, 1),
+      ...ceilingMedia.slice(0, 1),
+      ...electricMedia.slice(0, 1),
+      ...paintingMedia.slice(0, 1),
+      ...roofingMedia.slice(0, 1),
+    ];
+    return mixedSlides;
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +30,7 @@ export default function HeroSlider() {
     <div className="absolute inset-0 z-0">
       {/* Dark Overlay for Text Readability */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-slate-900/90 z-10"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-slate-900/90 z-10"></div>
 
       {/* Slides */}
       <div id="hero-slider" className="w-full h-full relative">
@@ -51,7 +40,7 @@ export default function HeroSlider() {
             src={slide.src}
             alt={slide.alt}
             fill
-            className={`object-cover animate-kenburns transition-opacity duration-1000 ${
+            className={`object-cover animate-kenburns transition-opacity duration-1000 filter saturate-125 contrast-110 brightness-105 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             priority={index === 0}

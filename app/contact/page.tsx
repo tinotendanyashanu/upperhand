@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-amber-50 to-white">
+      <section className="pt-32 pb-16 bg-linear-to-b from-amber-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <span className="text-xs font-semibold tracking-wider text-amber-600 uppercase">Contact Us</span>

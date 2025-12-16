@@ -2,6 +2,7 @@ import HeroSlider from "./components/HeroSlider";
 import ScrollReveal from "./components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
+import { solarMedia, ceilingMedia, roofingMedia } from "../lib/media";
 
 export default function Home() {
   return (
@@ -296,13 +297,13 @@ export default function Home() {
             {/* Project 1 */}
             <ScrollReveal>
               <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-[4/3] shadow-md group-hover:shadow-xl transition-all duration-500">
+                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-4/3 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
                   <Image
-                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop"
+                    src={solarMedia[0]?.src || "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop"}
                     alt="Solar Installation Project"
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out filter saturate-125 contrast-110 brightness-105"
                   />
                   <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-md text-xs font-semibold text-amber-600 shadow-sm">
                     Solar Installation
@@ -318,13 +319,13 @@ export default function Home() {
             {/* Project 2 */}
             <ScrollReveal delay="100">
               <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-[4/3] shadow-md group-hover:shadow-xl transition-all duration-500">
+                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-4/3 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
                   <Image
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+                    src={ceilingMedia[0]?.src || "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"}
                     alt="Ceiling Installation"
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out filter saturate-125 contrast-110 brightness-105"
                   />
                   <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-md text-xs font-semibold text-indigo-600 shadow-sm">
                     Ceiling Design
@@ -340,22 +341,22 @@ export default function Home() {
             {/* Project 3 */}
             <ScrollReveal delay="200">
               <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-[4/3] shadow-md group-hover:shadow-xl transition-all duration-500">
+                <div className="relative overflow-hidden rounded-xl bg-slate-100 mb-4 aspect-4/3 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
                   <Image
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop"
-                    alt="Borehole Drilling"
+                    src={roofingMedia[0]?.src || "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop"}
+                    alt="Roofing Project"
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out filter saturate-125 contrast-110 brightness-105"
                   />
-                  <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-md text-xs font-semibold text-cyan-600 shadow-sm">
-                    Borehole
+                  <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-md text-xs font-semibold text-slate-600 shadow-sm">
+                    Roofing
                   </div>
                 </div>
-                <h3 className="text-lg font-medium text-slate-900 mb-1 group-hover:text-cyan-600 transition-colors">
-                  Farm Borehole &amp; Pump
+                <h3 className="text-lg font-medium text-slate-900 mb-1 group-hover:text-slate-600 transition-colors">
+                  Commercial Roofing
                 </h3>
-                <p className="text-sm text-slate-500">100m Depth • Marondera</p>
+                <p className="text-sm text-slate-500">IBR Sheets • Chitungwiza</p>
               </div>
             </ScrollReveal>
           </div>

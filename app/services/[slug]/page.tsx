@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { serviceMedia } from "../../../lib/media";
 
 const servicesData: Record<string, {
   title: string;
@@ -14,6 +15,7 @@ const servicesData: Record<string, {
   bgColor: string;
   heroImage: string;
   galleryImages: string[];
+  featureVideo?: { src: string; poster?: string };
   features: { title: string; description: string; icon: string }[];
   process: { step: string; title: string; description: string }[];
   faqs: { question: string; answer: string }[];
@@ -30,12 +32,8 @@ const servicesData: Record<string, {
     icon: "lucide:sun",
     color: "amber",
     bgColor: "bg-amber-500",
-    heroImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.solar.hero ?? "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.solar.gallery,
     features: [
       { title: "Site Assessment", description: "Professional evaluation of your property's solar potential.", icon: "lucide:clipboard-check" },
       { title: "Custom Design", description: "Tailored system design to maximize efficiency and savings.", icon: "lucide:layout" },
@@ -70,12 +68,8 @@ const servicesData: Record<string, {
     icon: "lucide:plug-zap",
     color: "blue",
     bgColor: "bg-blue-600",
-    heroImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.electrical.hero ?? "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.electrical.gallery,
     features: [
       { title: "House Wiring", description: "Complete electrical wiring for new builds and renovations.", icon: "lucide:home" },
       { title: "DB Board Installation", description: "Distribution board installation and upgrades.", icon: "lucide:server" },
@@ -110,12 +104,11 @@ const servicesData: Record<string, {
     icon: "lucide:droplets",
     color: "cyan",
     bgColor: "bg-cyan-600",
-    heroImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1541844053589-346841d0b34c?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518173946687-a4c036bc1d1e?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.boreholes.hero ?? "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.boreholes.gallery,
+    featureVideo: serviceMedia.boreholes.video
+      ? { src: serviceMedia.boreholes.video, poster: serviceMedia.boreholes.poster }
+      : undefined,
     features: [
       { title: "Site Survey", description: "Geological assessment to locate optimal drilling points.", icon: "lucide:map-pin" },
       { title: "Drilling", description: "Professional drilling with modern rotary rigs.", icon: "lucide:construction" },
@@ -150,12 +143,8 @@ const servicesData: Record<string, {
     icon: "lucide:home",
     color: "slate",
     bgColor: "bg-slate-700",
-    heroImage: "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.roofing.hero ?? "https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.roofing.gallery,
     features: [
       { title: "IBR Roofing", description: "Industrial and residential IBR sheet installation.", icon: "lucide:layers" },
       { title: "Tile Roofing", description: "Beautiful concrete and clay tile roofs.", icon: "lucide:grid-3x3" },
@@ -190,12 +179,8 @@ const servicesData: Record<string, {
     icon: "lucide:square-stack",
     color: "indigo",
     bgColor: "bg-indigo-600",
-    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.ceilings.hero ?? "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.ceilings.gallery,
     features: [
       { title: "Gypsum Ceilings", description: "Smooth, paintable gypsum board installations.", icon: "lucide:square" },
       { title: "PVC Ceilings", description: "Durable, water-resistant PVC panels.", icon: "lucide:panel-top" },
@@ -230,12 +215,8 @@ const servicesData: Record<string, {
     icon: "lucide:paint-roller",
     color: "rose",
     bgColor: "bg-rose-500",
-    heroImage: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1200&auto=format&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?q=80&w=600&auto=format&fit=crop",
-    ],
+    heroImage: serviceMedia.painting.hero ?? "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1200&auto=format&fit=crop",
+    galleryImages: serviceMedia.painting.gallery,
     features: [
       { title: "Interior Painting", description: "Walls, ceilings, and trim painting.", icon: "lucide:home" },
       { title: "Exterior Painting", description: "Weather-resistant exterior coatings.", icon: "lucide:building" },
@@ -301,6 +282,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   }
 
   const colors = colorMap[service.color];
+  const galleryItems = [
+    ...service.galleryImages.map((img) => ({ type: "image" as const, src: img })),
+    ...(service.featureVideo ? [{ type: "video" as const, src: service.featureVideo.src, poster: service.featureVideo.poster }] : []),
+  ];
 
   return (
     <>
@@ -311,10 +296,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             src={service.heroImage}
             alt={service.title}
             fill
-            className="object-cover"
+            className="object-cover filter saturate-125 contrast-110 brightness-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <ScrollReveal>
@@ -366,14 +351,25 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </ScrollReveal>
             <ScrollReveal delay="200">
               <div className="grid grid-cols-2 gap-4">
-                {service.galleryImages.map((img, i) => (
-                  <div key={i} className={`relative aspect-square rounded-xl overflow-hidden ${i === 0 ? 'col-span-2' : ''}`}>
-                    <Image
-                      src={img}
-                      alt={`${service.title} ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
+                {galleryItems.map((item, i) => (
+                  <div key={item.src} className={`relative aspect-square rounded-xl overflow-hidden ${i === 0 ? 'col-span-2' : ''}`}>
+                    {item.type === "video" ? (
+                      <video
+                        className="absolute inset-0 h-full w-full object-cover filter saturate-125 contrast-110 brightness-105"
+                        controls
+                        poster={item.poster}
+                        preload="metadata"
+                      >
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image
+                        src={item.src}
+                        alt={`${service.title} ${i + 1}`}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-500 filter saturate-125 contrast-110 brightness-105"
+                      />
+                    )}
                   </div>
                 ))}
               </div>
