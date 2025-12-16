@@ -5,8 +5,15 @@ import { Metadata } from "next";
 import { serviceMedia } from "../../lib/media";
 
 export const metadata: Metadata = {
-  title: "Our Services | Upperhand - Solar, Electrical, Boreholes, Roofing, Ceilings, Painting",
-  description: "Explore Upperhand's comprehensive services: Solar installation, electrical work, borehole drilling, roofing, ceiling designs, and painting in Zimbabwe.",
+  title: "Our Services | Upperhand - Solar, Electrical, Boreholes, Roofing, Ceilings, Painting Zimbabwe",
+  description: "Professional solar installation, electrical services, borehole drilling, roofing, ceiling designs, and painting services across Zimbabwe. Expert technicians with quality guaranteed.",
+  keywords: "solar installation, electrical services, borehole drilling, roofing solutions, ceiling designs, painting services, zimbabwe",
+  openGraph: {
+    title: "Our Professional Services | Upperhand Zimbabwe",
+    description: "Complete range of construction and installation services across Zimbabwe",
+    type: "website",
+    url: "https://upperhand.co.zw/services",
+  },
 };
 
 const services = [

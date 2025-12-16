@@ -2,7 +2,28 @@ import HeroSlider from "./components/HeroSlider";
 import ScrollReveal from "./components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { solarMedia, ceilingMedia, roofingMedia } from "../lib/media";
+
+export const metadata: Metadata = {
+  title: "Upperhand | Solar Installation, Electrical & Construction Zimbabwe",
+  description: "Professional solar panels, electrical wiring, borehole drilling, roofing, ceiling designs & painting across Zimbabwe. Expert technicians, quality materials, affordable pricing. Get your free quote today.",
+  keywords: "solar installation zimbabwe, electrical services zimbabwe, borehole drilling zimbabwe, roofing solutions, ceiling designs, painting services, construction zimbabwe",
+  openGraph: {
+    title: "Upperhand | Professional Solar & Construction Services Zimbabwe",
+    description: "Transform your property with professional solar, electrical, and construction services across Zimbabwe",
+    type: "website",
+    url: "https://upperhand.co.zw",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Upperhand Professional Services",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

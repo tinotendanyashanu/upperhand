@@ -4,8 +4,15 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Upperhand - Engineering & Construction Services Zimbabwe",
-  description: "Learn about Upperhand, Zimbabwe's trusted provider of solar installation, electrical services, borehole drilling, roofing, ceilings, and painting services.",
+  title: "About Upperhand | Zimbabwe's Premier Engineering & Construction Firm",
+  description: "Discover Upperhand's story, mission, and expertise in solar installation, electrical services, borehole drilling, roofing, ceiling design, and professional painting across Zimbabwe.",
+  keywords: "about upperhand, engineering zimbabwe, construction services, company values, professional team",
+  openGraph: {
+    title: "About Upperhand - Zimbabwe's Engineering Leaders",
+    description: "Learn about our commitment to quality, innovation, and customer satisfaction in construction services",
+    type: "website",
+    url: "https://upperhand.co.zw/about",
+  },
 };
 
 export default function AboutPage() {

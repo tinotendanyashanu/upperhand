@@ -2,8 +2,15 @@ import ScrollReveal from "../components/ScrollReveal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Upperhand - Get a Free Quote",
-  description: "Contact Upperhand for solar installation, electrical services, borehole drilling, roofing, ceilings, and painting in Zimbabwe. Call 0771591526 or 0718393169.",
+  title: "Contact Upperhand | Get Your Free Quote - Solar, Electrical & Construction Services",
+  description: "Contact Upperhand for solar installation, electrical services, borehole drilling, roofing, ceiling design, and painting. Call +263 771 591 526 or +263 718 393 169. Available 7 days a week.",
+  keywords: "contact upperhand, get free quote, phone number, email, contact form, zimbabwe construction services",
+  openGraph: {
+    title: "Contact Upperhand - Get Your Free Quote",
+    description: "Ready to start your project? Contact us today for expert advice and a free consultation",
+    type: "website",
+    url: "https://upperhand.co.zw/contact",
+  },
 };
 
 export default function ContactPage() {

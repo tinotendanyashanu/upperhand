@@ -248,12 +248,29 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = servicesData[slug];
+  
   if (!service) {
     return { title: "Service Not Found | Upperhand" };
   }
+  
   return {
-    title: `${service.title} | Upperhand Zimbabwe`,
-    description: service.description,
+    title: `${service.title} | Upperhand Zimbabwe - Professional Services`,
+    description: `${service.description} Professional ${service.title.toLowerCase()} services across Zimbabwe. Expert technicians, quality workmanship, competitive pricing. Get your free quote today.`,
+    keywords: `${service.title.toLowerCase()}, professional ${service.title.toLowerCase()} zimbabwe, ${service.title.toLowerCase()} services, quality workmanship`,
+    openGraph: {
+      title: `${service.title} | Upperhand Zimbabwe`,
+      description: service.description,
+      type: "website",
+      url: `https://upperhand.co.zw/services/${slug}`,
+      images: [
+        {
+          url: service.heroImage,
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
   };
 }
 
@@ -287,8 +304,83 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     ...(service.featureVideo ? [{ type: "video" as const, src: service.featureVideo.src, poster: service.featureVideo.poster }] : []),
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        name: service.title,
+        description: service.description,
+        serviceType: service.title,
+        provider: {
+          "@type": "LocalBusiness",
+          name: "Upperhand",
+          url: "https://upperhand.co.zw",
+          telephone: "+263771591526",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "Zimbabwe",
+        },
+        url: `https://upperhand.co.zw/services/${slug}`,
+        image: service.heroImage,
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: `${service.title} Packages`,
+          itemListElement: service.features.map((feature) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: feature.title,
+              description: feature.description,
+            },
+          })),
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: service.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://upperhand.co.zw",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: "https://upperhand.co.zw/services",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.title,
+            item: `https://upperhand.co.zw/services/${slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
