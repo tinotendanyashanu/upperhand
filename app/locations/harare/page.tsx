@@ -65,7 +65,7 @@ const services = [
     slug: "roofing",
     icon: "lucide:home",
     color: "slate",
-    description: "Quality roofing solutions for homes and businesses in Harare. IBR sheets, tiles, trusses, gutters, and waterproofing.",
+   description: "Quality roofing solutions for homes and businesses in Harare. IBR sheets, tiles, trusses, gutters, and waterproofing.",
     features: [
       "IBR & corrugated iron roofing",
       "Tile roofing installation",
@@ -104,9 +104,11 @@ export default function HararePage() {
               <span className="text-amber-500">Services in Harare</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-3xl mb-8">
-              Upperhand is Harare's leading provider of solar installation, borehole drilling, electrical services, roofing, and construction solutions. Serving all Harare suburbs with professional technicians and quality materials.
+              Upperhand is Harare&apos;s leading provider of solar installation, borehole drilling, electrical services, roofing, and construction solutions. Serving all Harare suburbs with professional technicians and quality materials.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap
+
+-4">
               <a
                 href="tel:+263771591526"
                 className="inline-flex items-center justify-center px-8 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors"
@@ -197,7 +199,7 @@ export default function HararePage() {
 
           <div className="mt-8 text-center">
             <p className="text-slate-600 text-sm">
-              Don't see your area listed? <a href="/contact" className="text-amber-600 hover:underline font-medium">Contact us</a> - we likely service your area too!
+              Don&apos;t see your area listed? <a href="/contact" className="text-amber-600 hover:underline font-medium">Contact us</a> - we likely service your area too!
             </p>
           </div>
         </div>
@@ -219,7 +221,7 @@ export default function HararePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Local Harare Team</h3>
                 <p className="text-slate-600 text-sm">
-                  Based in Harare with deep knowledge of local conditions, regulations, and best practices for Zimbabwe's climate.
+                  Based in Harare with deep knowledge of local conditions, regulations, and best practices for Zimbabwe&apos;s climate.
                 </p>
               </div>
             </ScrollReveal>

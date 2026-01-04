@@ -24,7 +24,7 @@ export default function HeroSlider() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="absolute inset-0 z-0">

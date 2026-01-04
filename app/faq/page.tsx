@@ -190,7 +190,7 @@ export default function FAQPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="space-y-16">
-            {faqs.map((section, idx) => (
+            {faqs.map((section) => (
               <ScrollReveal key={section.category}>
                 <div>
                   {/* Section Header */}
@@ -228,7 +228,7 @@ export default function FAQPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-semibold text-white mb-4">Still Have Questions?</h2>
             <p className="text-amber-100 mb-8">
-              Can't find the answer you're looking for? Our team is here to help. Contact us today.
+              Can&apos;t find the answer you&apos;re looking for? Our team is here to help. Contact us today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
