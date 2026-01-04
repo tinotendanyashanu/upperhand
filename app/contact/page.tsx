@@ -2,14 +2,14 @@ import ScrollReveal from "../components/ScrollReveal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Upperhand | Get Your Free Quote - Solar, Electrical & Construction Services",
-  description: "Contact Upperhand for solar installation, electrical services, borehole drilling, roofing, ceiling design, and painting. Call +263 771 591 526 or +263 718 393 169. Available 7 days a week.",
-  keywords: "contact upperhand, get free quote, phone number, email, contact form, zimbabwe construction services",
+  title: "Contact Upperhand Zimbabwe | Get Free Quote - Solar, Electrical & Boreholes Nationwide",
+  description: "Contact Upperhand for solar installation, electrical services, borehole drilling across Zimbabwe. Serving Harare, Bulawayo, Gweru, Mutare & all cities. Call 0771 591 526. Free quotes. Available 7 days.",
+  keywords: "contact upperhand, upperhandzim contact, upperhand zimbabwe contact, upperhand phone number, free quote zimbabwe, solar installer contact, borehole drilling quote, electrical services contact zimbabwe, construction quote",
   openGraph: {
-    title: "Contact Upperhand - Get Your Free Quote",
-    description: "Ready to start your project? Contact us today for expert advice and a free consultation",
+    title: "Contact Upperhand Zimbabwe | Free Quotes for Solar & Construction Nationwide",
+    description: "Get your free quote today. Call 0771 591 526. Expert solar, electrical & construction services across all Zimbabwe.",
     type: "website",
-    url: "https://upperhand.co.zw/contact",
+    url: "https://upperhandzim.com/contact",
   },
 };
 

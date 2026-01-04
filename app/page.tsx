@@ -6,20 +6,21 @@ import type { Metadata } from "next";
 import { solarMedia, ceilingMedia, roofingMedia } from "../lib/media";
 
 export const metadata: Metadata = {
-  title: "Upperhand | Solar Installation, Electrical & Construction Zimbabwe",
-  description: "Professional solar panels, electrical wiring, borehole drilling, roofing, ceiling designs & painting across Zimbabwe. Expert technicians, quality materials, affordable pricing. Get your free quote today.",
-  keywords: "solar installation zimbabwe, electrical services zimbabwe, borehole drilling zimbabwe, roofing solutions, ceiling designs, painting services, construction zimbabwe",
+  title: "Solar Installation Zimbabwe | Borehole Drilling, Electrical Services - Harare, Bulawayo & Nationwide",
+  description: "#1 Solar installation, borehole drilling & electrical services across Zimbabwe. Serving Harare, Bulawayo, Gweru, Mutare, Chitungwiza. 100+ projects nationwide. Free quotes. Call 0771 591 526.",
+  keywords: "upperhand, upperhandzim, upperhand zimbabwe, upperhand zim, solar installation zimbabwe, solar panels harare, borehole drilling zimbabwe, electrician harare, electrical services zimbabwe, roofing contractors zimbabwe, solar power zimbabwe, borehole drilling harare, construction zimbabwe",
   openGraph: {
-    title: "Upperhand | Professional Solar & Construction Services Zimbabwe",
-    description: "Transform your property with professional solar, electrical, and construction services across Zimbabwe",
+    title: "Upperhand Zimbabwe | Solar Installation & Borehole Drilling Nationwide",
+    description: "Leading solar, electrical & construction services across all Zimbabwe. 100+ completed projects. Expert technicians, quality materials, affordable pricing.",
     type: "website",
-    url: "https://upperhand.co.zw",
+    url: "https://upperhandzim.com",
+    siteName: "Upperhand Zimbabwe",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Upperhand Professional Services",
+        alt: "Upperhand Zimbabwe - Solar Installation and Borehole Drilling Across Zimbabwe",
       },
     ],
   },

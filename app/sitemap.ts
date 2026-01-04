@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://upperhand.co.zw";
+  const baseUrl = "https://upperhandzim.com";
 
   const staticPages = [
     {
@@ -29,12 +29,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
   ];
+
+  const locations = [
+    { slug: "harare", name: "Harare" },
+  ];
+
+  const locationPages = locations.map((location) => ({
+    url: `${baseUrl}/locations/${location.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
 
   const services = [
     { slug: "solar", name: "Solar Installation" },
@@ -52,5 +69,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...servicePages];
+  return [...staticPages, ...locationPages, ...servicePages];
 }

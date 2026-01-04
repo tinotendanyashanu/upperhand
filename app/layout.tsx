@@ -11,37 +11,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Upperhand | Solar Installation, Electrical & Construction Zimbabwe",
-  description: "Professional solar panels, electrical wiring, borehole drilling, roofing, ceiling designs & painting across Zimbabwe. Expert technicians, quality materials, affordable pricing. Get your free quote today.",
-  keywords: "solar installation zimbabwe, electrical services zimbabwe, borehole drilling zimbabwe, roofing solutions, ceiling designs, painting services, construction zimbabwe, upperhand",
-  metadataBase: new URL("https://upperhand.co.zw"),
+  title: "Upperhand Zimbabwe | Solar Installation, Electrical & Borehole Drilling - Harare, Bulawayo, Gweru",
+  description: "Leading solar installation, electrical services & borehole drilling across Zimbabwe. Serving Harare, Bulawayo, Chitungwiza, Gweru, Mutare & nationwide. Expert technicians. Call 0771 591 526.",
+  keywords: "upperhand, upperhandzim, www.upperhandzim.com, upperhandzim.com, upperhand zimbabwe, upperhand zim, upperhand solar, upperhand construction, solar installation zimbabwe, solar panels harare, borehole drilling zimbabwe, electrical services harare, roofing zimbabwe, ceiling designs harare, electrician bulawayo, solar system zimbabwe, construction zimbabwe",
+  metadataBase: new URL("https://upperhandzim.com"),
   alternates: {
-    canonical: "https://upperhand.co.zw",
+    canonical: "https://upperhandzim.com",
   },
   openGraph: {
     type: "website",
     locale: "en_ZW",
-    url: "https://upperhand.co.zw",
-    title: "Upperhand | Solar, Electrical, Boreholes & Construction Services",
-    description: "Professional engineering and construction solutions in Zimbabwe. Solar installation, electrical work, borehole drilling, roofing, ceilings & painting.",
+    siteName: "Upperhand Zimbabwe",
+    url: "https://upperhandzim.com",
+    title: "Upperhand | Solar, Electrical & Borehole Services Across Zimbabwe",
+    description: "Professional solar installation, electrical services, borehole drilling nationwide in Zimbabwe. Based in Harare, serving all cities. Expert technicians, quality materials.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Upperhand Professional Services",
+        alt: "Upperhand - Solar Installation and Construction Services Across Zimbabwe",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Upperhand | Solar Installation & Construction Services",
-    description: "Professional solar, electrical, and construction services across Zimbabwe",
+    title: "Upperhand Zimbabwe | Solar Installation Nationwide",
+    description: "Professional solar, electrical, borehole drilling & construction services across all Zimbabwe. Call 0771 591 526",
     images: ["/og-image.jpg"],
   },
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   category: "construction",
-  authors: [{ name: "Upperhand" }],
+  authors: [{ name: "Upperhand Zimbabwe" }],
 };
 
 export default function RootLayout({
@@ -52,10 +53,10 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Upperhand",
-    image: "https://upperhand.co.zw/og-image.jpg",
-    description: "Professional solar installation, electrical services, borehole drilling, roofing, ceiling designs, and painting services across Zimbabwe",
-    url: "https://upperhand.co.zw",
+    name: "Upperhand Zimbabwe",
+    image: "https://upperhandzim.com/og-image.jpg",
+    description: "Professional solar installation, electrical services, borehole drilling, roofing, ceiling designs, and painting services across Zimbabwe. Serving Harare, Bulawayo, Gweru, Mutare, Chitungwiza & all major cities nationwide.",
+    url: "https://upperhandzim.com",
     telephone: "+263771591526",
     email: "Takuenyash@gmail.com",
     address: {
@@ -141,7 +142,7 @@ export default function RootLayout({
         />
         
         {/* Additional SEO meta tags */}
-        <link rel="canonical" href="https://upperhand.co.zw" />
+        <link rel="canonical" href="https://upperhandzim.com" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="author" content="Upperhand" />
