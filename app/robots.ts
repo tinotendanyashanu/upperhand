@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://upperhand.co.zw/sitemap.xml", // Placeholder domain
+    sitemap: "https://upperhandzim.com/sitemap.xml",
   };
 }

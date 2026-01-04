@@ -4,14 +4,14 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Upperhand | Zimbabwe's Premier Engineering & Construction Firm",
-  description: "Discover Upperhand's story, mission, and expertise in solar installation, electrical services, borehole drilling, roofing, ceiling design, and professional painting across Zimbabwe.",
-  keywords: "about upperhand, engineering zimbabwe, construction services, company values, professional team",
+  title: "About Upperhand Zimbabwe | Leading Solar & Construction Company - Nationwide Service",
+  description: "Upperhand serves all Zimbabwe with solar installation, electrical, and borehole drilling services. Based in Harare, operating nationwide. 100+ completed projects. Expert team with 5+ years experience.",
+  keywords: "about upperhand, upperhandzim, upperhand zimbabwe, upperhand company, solar company zimbabwe, construction company zimbabwe, engineering firm zimbabwe, professional contractors zimbabwe, trusted solar installer zimbabwe, nationwide service",
   openGraph: {
-    title: "About Upperhand - Zimbabwe's Engineering Leaders",
-    description: "Learn about our commitment to quality, innovation, and customer satisfaction in construction services",
+    title: "About Upperhand - Zimbabwe's Trusted Solar & Construction Experts",
+    description: "Learn about Zimbabwe's leading solar installation and construction company. Serving all major cities. 100+ projects, expert team, quality guaranteed.",
     type: "website",
-    url: "https://upperhand.co.zw/about",
+    url: "https://upperhandzim.com/about",
   },
 };
 

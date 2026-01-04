@@ -4,14 +4,14 @@ import Link from "next/link";
 import ProjectsClient from "./ProjectsClient";
 
 export const metadata: Metadata = {
-  title: "Our Projects | Upperhand - Portfolio of Completed Work Zimbabwe",
-  description: "Browse Upperhand's extensive portfolio of completed projects: solar installations, electrical work, boreholes, roofing, ceiling designs, and painting services across Zimbabwe. Filter by service category.",
-  keywords: "completed projects, portfolio, solar projects, electrical projects, borehole projects, roofing projects, ceiling projects, painting projects, zimbabwe",
+  title: "Our Projects Zimbabwe | Solar, Electrical & Borehole Portfolio - Harare, Bulawayo & Nationwide",
+  description: "Browse 100+ completed projects across Zimbabwe: solar installations, electrical work, boreholes, roofing, ceiling designs in Harare, Bulawayo, Gweru, Mutare. View our nationwide portfolio.",
+  keywords: "upperhand projects, upperhandzim portfolio, upperhand zimbabwe work, solar projects zimbabwe, borehole projects zimbabwe, electrical work portfolio, roofing projects zimbabwe, ceiling installation gallery, completed construction zimbabwe",
   openGraph: {
-    title: "Our Portfolio | Upperhand Zimbabwe",
-    description: "Explore our completed projects and professional work across all service categories",
+    title: "Portfolio | 100+ Completed Solar & Construction Projects Across Zimbabwe",
+    description: "View our extensive portfolio of completed solar, electrical, borehole, roofing and ceiling projects in all major Zimbabwe cities",
     type: "website",
-    url: "https://upperhand.co.zw/projects",
+    url: "https://upperhandzim.com/projects",
   },
 };
 

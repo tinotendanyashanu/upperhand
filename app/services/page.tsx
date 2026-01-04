@@ -5,14 +5,14 @@ import { Metadata } from "next";
 import { serviceMedia } from "../../lib/media";
 
 export const metadata: Metadata = {
-  title: "Our Services | Upperhand - Solar, Electrical, Boreholes, Roofing, Ceilings, Painting Zimbabwe",
-  description: "Professional solar installation, electrical services, borehole drilling, roofing, ceiling designs, and painting services across Zimbabwe. Expert technicians with quality guaranteed.",
-  keywords: "solar installation, electrical services, borehole drilling, roofing solutions, ceiling designs, painting services, zimbabwe",
+  title: "Our Services Zimbabwe | Solar, Electrical, Boreholes & Roofing - Harare, Bulawayo & Nationwide",
+  description: "Comprehensive construction services across Zimbabwe: Solar installation, electrical wiring, borehole drilling, roofing, ceiling designs, painting. Serving all cities. Expert technicians. Free quotes.",
+  keywords: "upperhand services, upperhandzim, upperhand zimbabwe, solar installation zimbabwe, electrical services harare, borehole drilling zimbabwe, roofing contractors zimbabwe, ceiling installation zimbabwe, painting services zimbabwe, construction services zimbabwe, electrician harare",
   openGraph: {
-    title: "Our Professional Services | Upperhand Zimbabwe",
-    description: "Complete range of construction and installation services across Zimbabwe",
+    title: "Professional Services | Solar, Electrical & Boreholes Across Zimbabwe",
+    description: "Complete range of solar, electrical, borehole, roofing, ceiling & painting services nationwide in Zimbabwe. Expert technicians with quality guaranteed.",
     type: "website",
-    url: "https://upperhand.co.zw/services",
+    url: "https://upperhandzim.com/services",
   },
 };
 
