@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Preloader from "./components/Preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -150,6 +151,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased bg-white text-slate-600 selection:bg-amber-100 selection:text-amber-900 overflow-x-hidden`}
       >
+        <Preloader />
         <Navbar />
         <main>{children}</main>
         <WhatsAppButton />
