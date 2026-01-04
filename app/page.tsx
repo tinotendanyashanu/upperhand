@@ -334,7 +334,7 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-slate-900 mb-1 group-hover:text-amber-600 transition-colors">
                   Residential Solar System
                 </h3>
-                <p className="text-sm text-slate-500">5kW System • Harare</p>
+                <p className="text-sm text-slate-500">3kva System • Harare</p>
               </div>
             </ScrollReveal>
 
@@ -378,7 +378,7 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-slate-900 mb-1 group-hover:text-slate-600 transition-colors">
                   Commercial Roofing
                 </h3>
-                <p className="text-sm text-slate-500">IBR Sheets • Chitungwiza</p>
+                <p className="text-sm text-slate-500">roofing - tiles • Chitungwiza</p>
               </div>
             </ScrollReveal>
           </div>
